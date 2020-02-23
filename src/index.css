@@ -13,10 +13,14 @@ body {
   box-sizing: border-box;
 }
 
-h1, ul, p {
+h1, h2, ul, p {
   color: #232323;
 }
+p, li {
+  font-family: 'Rajdhani';
+}
 .darkmode h1,
+.darkmode h2,
 .darkmode ul,
 .darkmode p {
   color: #f3f3f3;
@@ -32,5 +36,11 @@ h1, ul, p {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes lines {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }

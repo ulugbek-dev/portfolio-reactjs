@@ -3,8 +3,7 @@ const initialState = {
         false
     ) : (
         JSON.parse(localStorage.getItem('UA-portfolio'))
-    ),
-
+    )
 }
 
 export default function state(state = initialState, { type, payload }) {

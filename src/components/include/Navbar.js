@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './../../img/logo.png';
 import { Nav } from './../../styled/Nav';
-import { Wrapper } from './../../styled/Wrapper';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 

@@ -19,6 +19,8 @@ export const Header = styled.header`
         left: -400px;
         top: -1000px;
         background: rgba(0,0,0,0.4);
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        animation: lines 2.5s forwards;
     }
     :after {
         content: '';
@@ -29,5 +31,8 @@ export const Header = styled.header`
         left: -500px;
         top: -1000px;
         background: rgba(0,0,0,0.4);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        animation: lines 2s forwards;
     }
 `

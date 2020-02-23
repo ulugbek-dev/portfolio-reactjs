@@ -9,10 +9,13 @@ export default function Mode() {
     return (
         <>
             <DarkMode 
-                dark={darkMode ? true : false}
-                onClick={() => dispatch({
-                    type: 'DARK_MODE'
-                })}
+                dark={darkMode}
+                onClick={() => {
+                    dispatch({
+                        type: 'DARK_MODE'
+                    });
+                    localStorage.setItem('UA-portfolio', !darkMode)
+                }}
             >
                 <i className={darkMode ? 'fa fa-sun-o' : 'fa fa-moon-o'}></i>
             </DarkMode>

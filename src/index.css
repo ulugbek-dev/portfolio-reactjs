@@ -6,12 +6,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-* {
-  font-family:'Rajdhani';
-}
 *:focus {
   outline:none;
 }
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+h1, ul, p {
+  color: #232323;
+}
+.darkmode h1,
+.darkmode ul,
+.darkmode p {
+  color: #f3f3f3;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    color: rgb(147, 193, 196);
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

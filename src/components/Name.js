@@ -3,14 +3,19 @@ import { MyName } from './../styled/MyName';
 
 export default function Name({ name }) {
     const nameArr = name.split('');
-    const [anim, setAnim] = useState(false); 
+    const [anim, setAnim] = useState(true); 
 
     useEffect(() => {
-        if(anim)
-            setTimeout(() => { setAnim(!anim) }, 7000);
-        else
-            setAnim(!anim);
-    }, [anim])
+        const animation = setTimeout(() => { 
+            if(anim)
+                setAnim(!anim);
+            setAnim(true);
+        }, 6000);
+
+        return () => {
+            clearTimeout(animation)
+        }
+    })
 
     return (
         <MyName>

@@ -9,6 +9,11 @@ export const Header = styled.header`
     overflow: hidden;
     padding: 30px 0;
     ${props => props.dark ? css`background-color: #10141a;` : css`background-color: #f6f6f6;`}
+    ${props => props.out ? css`
+        animation: componentOut 800ms forwards cubic-bezier(0.44,-0.01, 0.3, 0.86);
+    ` : css`
+        animation: componentIn 800ms forwards cubic-bezier(0.44,-0.01, 0.3, 0.86);
+    `}
 
     :before {
         content: '';

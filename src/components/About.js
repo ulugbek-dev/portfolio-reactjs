@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutText } from './../../styled/AboutText';
+import { AboutText } from './../styled/AboutText';
 
 export default function About() {
     return (

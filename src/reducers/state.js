@@ -3,7 +3,8 @@ const initialState = {
         false
     ) : (
         JSON.parse(localStorage.getItem('UA-portfolio'))
-    )
+    ),
+    animation: false
 }
 
 export default function state(state = initialState, { type, payload }) {
@@ -12,6 +13,11 @@ export default function state(state = initialState, { type, payload }) {
             return {
                 ...state,
                 darkMode: !state.darkMode
+            }
+        case 'COMPONENT_OUT':
+            return {
+                ...state,
+                animation: !state.animation
             }
         default: 
             return state

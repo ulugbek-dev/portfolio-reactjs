@@ -3,8 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #232626;
 }
 *:focus {
   outline:none;
@@ -42,5 +41,37 @@ p, li {
 @keyframes lines {
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes componentIn {
+  0% {
+    position: fixed;
+    transform: scale(0.8) translateX(150%);
+  }
+  50% {
+    transform: scale(0.8) translateX(0%);
+  }
+  55% {
+    transform: scale(0.8) translateX(0%);
+  }
+  100% {
+    transform: scale(1) translateX(0%);
+  }
+}
+
+@keyframes componentOut {
+  0% {
+    transform: scale(1) translateX(0%);
+  }
+  45% {
+    transform: scale(0.8) translateX(0%);
+  }
+  50% {
+    transform: scale(0.8) translateX(0%);
+  }
+  100% {
+    position: fixed;
+    transform: scale(0.8) translateX(-150%);
   }
 }

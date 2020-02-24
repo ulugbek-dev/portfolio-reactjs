@@ -29,12 +29,13 @@ export const Nav = styled.nav`
             margin: 0 30px;
             font-size: 14px;
 
-            a {
+            p {
                 color: inherit;
                 text-decoration: none;
                 border: 1px solid transparent;
                 padding: 4px 0;
                 transition: 200ms;
+                cursor: pointer;
 
                 :hover {
                     border-bottom: 1px solid #232323;

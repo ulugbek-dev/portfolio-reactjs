@@ -3,7 +3,7 @@ import { primaryColor } from './variables';
 
 const name = 'Ulugbek Abduloev ';
 const nameArr = name.split('');
-let count = 200;
+let count = 1600;
 
 export const MyName = styled.h1`
     text-transform: uppercase;
@@ -24,7 +24,7 @@ export const MyName = styled.h1`
         }
         ${nameArr.map((x, i) => (
             css`:nth-child(${i}) {
-                animation: bounce 200ms ${count += 60}ms;
+                animation: bounce 200ms ${count += 50}ms;
             }`
         ))}
     }

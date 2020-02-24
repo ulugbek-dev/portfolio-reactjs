@@ -18,15 +18,17 @@ export default function Navbar() {
     ];
 
     const handleLink = (x) => {
-        dispatch({
-            type: 'COMPONENT_OUT'
-        });
-        setTimeout(() => {
+        if(window.location.pathname.split("/").pop() !== x.toLocaleLowerCase().split(' ').join('-')) {
             dispatch({
                 type: 'COMPONENT_OUT'
             });
-            return history.push(x.toLocaleLowerCase().split(' ').join('-'))
-        }, 800)
+            setTimeout(() => {
+                dispatch({
+                    type: 'COMPONENT_OUT'
+                });
+                return history.push(x.toLocaleLowerCase().split(' ').join('-'))
+            }, 800)
+        }
     }
 
     return (

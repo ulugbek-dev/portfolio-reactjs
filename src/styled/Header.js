@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { darkBg, lightBg } from './../styled/variables';
 
 export const Header = styled.header`
     position: absolute;
@@ -8,7 +9,7 @@ export const Header = styled.header`
     top: 0;
     overflow: hidden;
     padding: 30px 0;
-    ${props => props.dark ? css`background-color: #10141a;` : css`background-color: #f6f6f6;`}
+    ${props => props.dark ? css`background-color: ${darkBg};` : css`background-color: ${lightBg};`}
     ${props => props.out ? css`
         animation: componentOut 800ms forwards cubic-bezier(0.44,-0.01, 0.3, 0.86);
     ` : css`
@@ -23,7 +24,7 @@ export const Header = styled.header`
         transform: rotate(24deg);
         left: -400px;
         top: -1000px;
-        background: rgba(0,0,0,0.4);
+        ${props => props.dark ? css`background-color: rgba(0,0,0,0.4);` : css`background-color: rgba(0,0,0,0.2);`}
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
         animation: lines 2.5s forwards;
     }
@@ -35,7 +36,7 @@ export const Header = styled.header`
         transform: rotate(24deg);
         left: -500px;
         top: -1000px;
-        background: rgba(0,0,0,0.4);
+        ${props => props.dark ? css`background-color: rgba(0,0,0,0.4);` : css`background-color: rgba(0,0,0,0.2);`}
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
         animation: lines 2s forwards;

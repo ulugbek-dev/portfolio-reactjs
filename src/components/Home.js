@@ -3,6 +3,7 @@ import { Header } from './../styled/Header';
 import { Wrapper } from './../styled/Wrapper';
 import { useSelector } from 'react-redux';
 import Name from './Name';
+import Navbar from './include/Navbar';
 
 export default function Home() {
     const state = useSelector(state => state);
@@ -12,6 +13,7 @@ export default function Home() {
             <Wrapper justifyCenter>
                 <Name name="Ulugbek Abduloev" />
             </Wrapper>
+            <Navbar />
         </Header>
     )
 }

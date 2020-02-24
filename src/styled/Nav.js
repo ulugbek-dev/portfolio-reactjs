@@ -26,7 +26,7 @@ export const Nav = styled.nav`
         padding: 0;
 
         li {
-            margin: 0 30px;
+            margin: 0 3vw;
             font-size: 14px;
 
             p {

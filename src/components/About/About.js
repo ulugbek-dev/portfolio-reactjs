@@ -1,6 +1,6 @@
 import React from 'react';
-import { AboutMe } from './../styled/AboutMe';
-import myPicture from './../img/ulugbek.jpg'
+import { AboutMe } from './styled';
+import myPicture from './../../img/ulugbek.jpg'
 import { useSelector } from 'react-redux';
 
 export default function About() {

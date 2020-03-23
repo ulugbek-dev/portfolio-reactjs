@@ -28,60 +28,22 @@ p, li {
   color: #f3f3f3;
 }
 
-@keyframes bounce {
+.app {
+  transform: scale(1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: app 400ms forwards 400ms;
+}
+@keyframes app{
   0% {
-    transform: scale(1);
-  }
-  50% {
-    color: rgb(147, 193, 196);
-    transform: scale(1.3);
+      transform: scale(0.8) translateX(0%);
+      opacity: 0;
   }
   100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes lines {
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-}
-
-@keyframes componentIn {
-  0% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    position: fixed;
-    transform: scale(0.8) translateX(155%);
-  }
-  50% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    transform: scale(0.8) translateX(0%);
-  }
-  55% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    transform: scale(0.8) translateX(0%);
-  }
-  100% {
-    position: absolute;
-    transform: scale(1) translateX(0%);
-  }
-}
-
-@keyframes componentOut {
-  0% {
-    transform: scale(1) translateX(0%);
-  }
-  45% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    transform: scale(0.8) translateX(0%);
-  }
-  50% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    transform: scale(0.8) translateX(0%);
-  }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    position: fixed;
-    transform: scale(0.8) translateX(-155%);
+      transform: scale(1) translateX(0%);
+      opacity: 1;
   }
 }

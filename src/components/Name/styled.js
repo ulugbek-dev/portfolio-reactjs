@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
-import { primaryColor } from './variables';
+import { primaryColor } from './../../styled/variables';
 
 const name = 'Ulugbek Abduloev ';
 const nameArr = name.split('');
 let count = 1600;
 
-export const MyName = styled.h1`
+export const NameStyled = styled.h1`
     text-transform: uppercase;
     cursor: default;
     margin: 0;
@@ -30,5 +30,18 @@ export const MyName = styled.h1`
     }
     .space{
         width: 14px;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            color: rgb(147, 193, 196);
+            transform: scale(1.3);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 `

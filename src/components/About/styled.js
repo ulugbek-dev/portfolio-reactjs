@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor } from './variables';
+import { primaryColor } from './../../styled/variables';
 
 export const AboutMe = styled.section`
     display: flex;
@@ -14,7 +14,20 @@ export const AboutMe = styled.section`
             width: 100%;
             border-radius: 50%;
             max-width: 300px;
-            padding-right: 20px;
+            margin-right: 20px;
+            border: none;
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+            transform: scale(1);
+            transition: 350ms ease-out;
+
+            :hover {
+                transform: scale(1.035);
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+            }
         }
     }
     .text {

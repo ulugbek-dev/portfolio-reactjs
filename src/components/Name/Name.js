@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MyName } from './../styled/MyName';
+import { NameStyled } from './styled';
 
 export default function Name({ name }) {
     const nameArr = name.split('');
@@ -18,8 +18,8 @@ export default function Name({ name }) {
     })
 
     return (
-        <MyName>
-            {anim && nameArr.map((x, i) => x === ' ' ? <span className="space">{x}</span> : <span>{x}</span>)}
-        </MyName>
+        <NameStyled>
+            {anim && nameArr.map((x, i) => x === ' ' ? <span className="space" key={i}>{x}</span> : <span key={i}>{x}</span>)}
+        </NameStyled>
     );
 }

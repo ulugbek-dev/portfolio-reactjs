@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const DarkMode = styled.div`
+export const DarkModeStyled = styled.div`
     padding: 8px;
     position: fixed;
     right: -80px;

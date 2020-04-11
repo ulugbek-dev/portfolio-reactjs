@@ -3,7 +3,7 @@ import { HomeStyled } from './styled';
 import { Wrapper } from '../../styled/Wrapper';
 import { useSelector } from 'react-redux';
 import Name from '../Name/Name';
-import { Link } from 'react-router-dom';
+import LazyLink from './LazyLink';
 
 export default function Home() {
     const state = useSelector(state => state);
@@ -13,10 +13,10 @@ export default function Home() {
             <Wrapper column justifyCenter alignCenter>
                 <Name name="Ulugbek Abduloev" />
                 
-                <Link to="/about-me">
+                <LazyLink to='/about-me' delay='1000'>
                     About me 
                     <span className="arrow"></span>
-                </Link>
+                </LazyLink>
             </Wrapper>
         </HomeStyled>
     )

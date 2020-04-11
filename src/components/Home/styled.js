@@ -55,6 +55,8 @@ export const HomeStyled = styled.header`
         border-radius: 4px;
         text-decoration: none;
         position: relative;
+        border: none;
+        cursor: pointer;
         transition: 200ms;
         :hover > .arrow {
             animation: arrow 1000ms infinite;

@@ -1,23 +1,16 @@
 import React from 'react';
 import { HomeStyled } from './styled';
-import { Wrapper } from '../../styled/Wrapper';
-import { useSelector } from 'react-redux';
 import Name from '../Name/Name';
-import LazyLink from './LazyLink';
+import { Link } from 'react-router-dom';
+import { useHeight } from '@ulugbek-dev/windowsize';
 
 export default function Home() {
-    const state = useSelector(state => state);
+    const height = useHeight();
 
     return (
-        <HomeStyled dark={state.darkMode}>
-            <Wrapper column justifyCenter alignCenter>
-                <Name name="Ulugbek Abduloev" />
-                
-                <LazyLink to='/about-me' delay='1000'>
-                    About me 
-                    <span className="arrow"></span>
-                </LazyLink>
-            </Wrapper>
+        <HomeStyled height={height}>
+            <Name name="Ulugbek Abduloev" />
+            <Link to="/about">About me</Link>
         </HomeStyled>
-    )
+    );
 }

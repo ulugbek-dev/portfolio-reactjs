@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { primaryColor } from './../../styled/variables';
+import { primaryColor } from './../../elements/variables';
 
 const name = 'Ulugbek Abduloev ';
 const nameArr = name.split('');
@@ -8,10 +8,9 @@ let count = 1600;
 export const NameStyled = styled.h1`
     text-transform: uppercase;
     cursor: default;
-    margin: 0;
     align-self: center;
     font-size: 44px;
-    margin-bottom: 20px;
+    margin: 0;
 
     span {
         transform: scale(1);

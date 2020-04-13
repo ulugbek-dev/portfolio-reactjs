@@ -2,15 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { NameStyled } from './styled';
 
 export default function Name({ name }) {
-    const nameArr = name.split('');
+    
     const [anim, setAnim] = useState(true); 
+    const nameArr = name.split('').map((x, i) => x === ' ' 
+        ? <span className="space" key={i}>{x}</span> 
+        : <span key={i}>{x}</span>);
 
     useEffect(() => {
         const animation = setTimeout(() => { 
             if(anim)
                 setAnim(!anim);
             setAnim(true);
-        }, 6000);
+        }, 5000);
 
         return () => {
             clearTimeout(animation)
@@ -19,7 +22,7 @@ export default function Name({ name }) {
 
     return (
         <NameStyled>
-            {anim && nameArr.map((x, i) => x === ' ' ? <span className="space" key={i}>{x}</span> : <span key={i}>{x}</span>)}
+            {anim && nameArr}
         </NameStyled>
     );
 }

@@ -1,12 +1,6 @@
 const initialState = (
     localStorage.getItem('UA-portfolio') === null ? (
-        {
-            darkMode: false,
-            animations: {
-                home: 0,
-                about: 0
-            }
-        }
+        {}
     ) : (
         JSON.parse(localStorage.getItem('UA-portfolio'))
     )
@@ -14,6 +8,11 @@ const initialState = (
 
 export default function state(state = initialState, { type, payload }) {
     switch(type) {
+        case 'APP_ANIMATION':
+            return {
+                ...state,
+                animation: !state.animation
+            }
         case 'DARK_MODE':
             return {
                 ...state,

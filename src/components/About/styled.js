@@ -1,50 +1,67 @@
 import styled from 'styled-components';
-import { primaryColor } from './../../styled/variables';
+import { primaryColor, darkBg } from '../../elements/variables';
 
-export const AboutMe = styled.section`
+export const AboutStyled = styled.div`
+    position: absolute;
+    background: ${darkBg};
+    height: ${props => props.height}px;
+    width: 100%;
+    left: 0;
+    top: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    .img {
-        flex: 1;
+    .wrapper {
         display: flex;
+        align-items: center;
         justify-content: center;
 
-        img {
-            width: 100%;
-            border-radius: 50%;
-            max-width: 300px;
-            margin-right: 20px;
-            border: none;
-            -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
-            -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
-            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
-            transform: scale(1);
-            transition: 350ms ease-out;
+        .animation {
+            flex: 1;
+            display: flex;
+            justify-content: center;
 
-            :hover {
-                transform: scale(1.035);
-                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+            svg {
+                width: 100%;
+                padding-left: 30px;
+                max-width: 500px;
+            }
+        }
+
+        .content {
+            flex: 1;
+            padding: 0 30px;
+
+            .hello {
+                font-size: 32px;
+                font-family: 'Helvetica Neue', sans-serif;
+                font-weight: 700;
+                margin-bottom: 4px;
+
+                span {
+                    color: ${primaryColor};
+                    animation: blink 2000ms infinite;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.4;
+                max-width: 600px;
             }
         }
     }
-    .text {
-        flex: 1.2;
 
-        p {
-            max-width: 700px;
-            font-size: 18px;
-            line-height: 1.4;
+    @keyframes blink {
+        from {
+            opacity: 0;
         }
-        b {
-            font-size: 30px;
-            
-            span {
-                color: ${primaryColor};
-                margin-left: 4px;
-            }
+        30%, 70% {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
         }
     }
 `

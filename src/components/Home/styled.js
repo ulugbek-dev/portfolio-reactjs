@@ -1,115 +1,75 @@
-import styled, { css } from 'styled-components';
-import { darkBg, lightBg, primaryColor } from './../../styled/variables';
+import styled from 'styled-components';
+import { darkBg, primaryColor } from './../../elements/variables';
 
 export const HomeStyled = styled.header`
+    height: ${props => props.height}px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${darkBg};
+    flex-direction: column;
+    padding-top: 40px;
     position: absolute;
-    height: 100%;
     width: 100%;
-    left: 0;
     top: 0;
-    overflow: hidden;
-    padding: 30px 0;
-    padding-top: 50px;
-
-    ${props => props.dark ? css`
-        background-color: ${darkBg};
-    ` : css`
-        background-color: ${lightBg};
-    `}
-
-    :before {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 5000px;
-        transform: rotate(24deg);
-        left: -400px;
-        top: -1000px;
-        ${props => props.dark ? css`background-color: rgba(0,0,0,0.4);` : css`background-color: rgba(0,0,0,0.2);`}
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-        animation: lines 2.5s forwards;
-    }
-    :after {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 5000px;
-        transform: rotate(24deg);
-        left: -500px;
-        top: -1000px;
-        ${props => props.dark ? css`background-color: rgba(0,0,0,0.4);` : css`background-color: rgba(0,0,0,0.2);`}
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-        animation: lines 2s forwards;
-    }
 
     a {
-        margin-top: 20px;
-        color: #fff;
-        background: ${primaryColor};
-        min-width: 144px;
-        display: flex;
-        justify-content: center;
-        padding: 12px;
-        padding-right: 50px;
-        border-radius: 4px;
+        margin-top: 22px;
         text-decoration: none;
+        font-size: 16px;
+        display: inline-block;
         position: relative;
-        border: none;
-        cursor: pointer;
-        transition: 200ms;
-        :hover > .arrow {
-            animation: arrow 1000ms infinite;
+        text-align: center;
+        color: #fff;
+        border: 1px solid ${primaryColor};
+        border-radius: 5px;
+        padding: 10px 28px;
+        box-shadow: 0 0 0 0 transparent;
+        transition: all 0.2s ease-in;
+
+        :hover {
+            color: white;
+            box-shadow: 0 0 30px 0 transparentize(${primaryColor}, 0.5);
+            background-color: ${primaryColor};
+            transition: all 0.2s ease-out;
+
+            :before {
+                animation: shine 0.5s 0s linear;
+            }
         }
 
-        .arrow {
-            width: 20px;
-            height: 2px;
-            background: #fff;
+        &:active {
+            box-shadow: 0 0 0 0 transparent;
+            transition: box-shadow 0.2s ease-in;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 86%;
             position: absolute;
-            top: 50%;
-            right: 18px;
-            opacity: .7;
-            transition: 200ms;
-            :before,
-            :after {
-                content: '';
-                position: absolute;
-                width: 8px;
-                height: 2px;
-                background: #fff;
-                right: 0;
-                top: -100%;
-                transform: rotate(45deg);
-            }
-            :after {
-                top: 100%;
-                transform: rotate(-45deg);
-            }
+            top: 7%;
+            left: 0%;
+            opacity: 0;
+            background: white;
+            box-shadow: 0 0 15px 3px white;
+            transform: skewX(-20deg);
         }
-    }
 
-    @keyframes lines {
-        to {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-    }
-    @keyframes arrow {
-        0% {
-            opacity: 1;
-            transform: translateX(0%);
-        }
-        30% {
-            opacity: 1;
-            transform: translateX(-40%);
-        }
-        70% {
-            opacity: 1;
-            transform: translateX(15%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0%);
+        @keyframes shine {
+            from {
+                opacity: 0;
+                left: 0%;
+            }
+
+            50% {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                left: 100%;
+            }
         }
     }
 `

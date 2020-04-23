@@ -1,18 +1,20 @@
 import styled from 'styled-components';
-import { textDarkColor, textLightColor } from './../../elements/variables';
+import { textLight, textDark } from './../../elements/variables';
 
 export const AppStyled = styled.div`
-    color: ${textLightColor};
+    color: ${props => props.darkMode ? textLight : textDark};
     height: 100%;
 
 
     .animate-enter,
     .animate-enter-active {
         animation: componentIn 800ms forwards;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     .animate-exit,
     .animate-exit-active {
-        animation: componentExit 900ms forwards;
+        animation: componentExit 1200ms forwards;
+        box-shadow: 10px 0px 37px 0px rgba(0,0,0,0.2);
     }
 
     @keyframes componentIn {

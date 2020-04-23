@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { maxWidth } from '../../elements/variables';
+import styled, { css } from 'styled-components';
+import { textDark, textLight } from './../../elements/variables';
 
 export const NavbarStyled = styled.nav`
     display: flex;
@@ -11,6 +11,8 @@ export const NavbarStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    transition: 150ms;
+    ${props => props.scrollTop ? css`background: rgba(0, 0, 0, .9);` : css`background: transparent;`}
 
     .wrapper {
         display: inherit;
@@ -38,11 +40,11 @@ export const NavbarStyled = styled.nav`
             border-bottom: 1px solid transparent;
             :hover {
                 opacity: 1;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid ${props => props.darkMode ? textLight : textDark};
             }
         }
-        li.active {
-            border-bottom: 1px solid #fff;
+        a.active li {
+            border-bottom: 1px solid ${props => props.darkMode ? textLight : textDark};
         }
     }
 `

@@ -14,7 +14,6 @@ export const AboutStyled = styled.div`
 
     .wrapper {
         display: flex;
-        align-items: center;
         justify-content: center;
 
         .animation {
@@ -31,7 +30,7 @@ export const AboutStyled = styled.div`
 
         .content {
             flex: 1;
-            padding: 0 30px;
+            padding: 30px;
 
             .hello {
                 font-size: 32px;

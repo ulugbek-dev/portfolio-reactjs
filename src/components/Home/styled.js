@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { darkBg, primaryColor } from './../../elements/variables';
+import { darkBg, lightBg, primaryColor, textLight, textDark } from './../../elements/variables';
 
 export const HomeStyled = styled.header`
     height: ${props => props.height}px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${darkBg};
+    background: ${props => props.darkMode ? darkBg : lightBg};
     flex-direction: column;
     padding-top: 40px;
     position: absolute;
@@ -20,7 +20,7 @@ export const HomeStyled = styled.header`
         display: inline-block;
         position: relative;
         text-align: center;
-        color: #fff;
+        color: ${props => props.darkMode ? textLight : textDark};
         border: 1px solid ${primaryColor};
         border-radius: 5px;
         padding: 10px 28px;

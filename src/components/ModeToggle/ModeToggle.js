@@ -1,12 +1,20 @@
-import React,{ useState } from 'react';
+import React, { useEffect } from 'react';
 import { ModeToggleStyled } from './styled';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function ModeToggle() {
-    const [darkMode, setDarkMode] = useState(true);
+    const dispatch = useDispatch();
+    const state = useSelector(state => state);
 
+    const handleDarkMode = () => {
+        dispatch({ type: 'DARK_MODE' });
+    }
+    useEffect(() => {
+        localStorage.setItem('UA-portfolio', JSON.stringify(state));
+    }, [state]);    
     return (
         <ModeToggleStyled>
-            <input type="checkbox" id="day_night" onClick={() => setDarkMode(!darkMode)} checked={darkMode} />
+            <input type="checkbox" id="day_night" onClick={handleDarkMode} checked={state.darkMode} />
             <label for="day_night" className="toggle">
                 <span className="toggle_handler">
                     <span className="crater crater_1"></span>

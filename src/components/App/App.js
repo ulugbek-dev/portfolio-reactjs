@@ -17,8 +17,7 @@ export default function App() {
             <CSSTransition
               key={location.pathname}
               classNames="animate"
-              transitionEnterTimeout={750}
-              timeout={1500}
+              timeout={900}
             >
               <Switch location={location}>
                 <Route path="/about" exact render={() => <About />} />

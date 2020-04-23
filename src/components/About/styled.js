@@ -37,15 +37,16 @@ export const AboutStyled = styled.div`
                 font-size: 32px;
                 font-family: 'Helvetica Neue', sans-serif;
                 font-weight: 700;
-                margin-bottom: 4px;
+                margin-bottom: 8px;
 
                 span {
+                    font-size: 32px;
                     color: ${primaryColor};
                     animation: blink 2000ms infinite;
                 }
             }
 
-            p {
+            span {
                 font-size: 20px;
                 line-height: 1.4;
                 max-width: 600px;

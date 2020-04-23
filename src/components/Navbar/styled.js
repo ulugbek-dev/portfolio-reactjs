@@ -30,11 +30,15 @@ export const NavbarStyled = styled.nav`
         
         li {
             margin-right: 40px;
-            opacity: .8;
+            opacity: .9;
             font-size: 16px;
+            font-weight: 500;
             transition: 250ms ease-out;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
             :hover {
                 opacity: 1;
+                border-bottom: 1px solid #eee;
             }
         }
         li.active {

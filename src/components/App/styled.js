@@ -8,44 +8,38 @@ export const AppStyled = styled.div`
 
     .animate-enter,
     .animate-enter-active {
-        animation: componentIn 1500ms forwards;
+        animation: componentIn 800ms forwards;
     }
     .animate-exit,
     .animate-exit-active {
-        animation: componentExit 750ms forwards;
+        animation: componentExit 900ms forwards;
     }
 
     @keyframes componentIn {
         0% {
             opacity: 0;
-            transform: scale(.7) translateX(150%);
+            transform: scale(.7);
         }
-        40% {
+        15% {
             opacity: 0;
-            transform: scale(.7) translateX(150%);
-        }
-        75% {
-            opacity: 1;
-            transform: scale(.7) translateX(0%);
+            transform: scale(.7);
         }
         100% {
             opacity: 1;
-            transform: scale(1) translateX(0%);
+            transform: scale(1);
         }
     }
 
     @keyframes componentExit {
         0% {
             opacity: 1;
+            z-index: 2;
             transform: scale(1) translateX(0%);
-        }
-        40% {
-            opacity: 1;
-            transform: scale(.7) translateX(0%);
         }
         100% {
             opacity: 1;
-            transform: scale(.7) translateX(-150%);
+            z-index: 2;
+            transform: scale(1) translateX(-150%);
         }
     }
 `

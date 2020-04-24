@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { primaryColor, darkBg } from '../../elements/variables';
+import { primaryColor, darkBg, lightBg } from '../../elements/variables';
 
 export const AboutStyled = styled.div`
     position: absolute;
-    background: ${darkBg};
+    background: ${props => props.darkMode ? darkBg : lightBg};
     height: ${props => props.height}px;
     width: 100%;
     left: 0;

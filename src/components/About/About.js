@@ -4,12 +4,14 @@ import { useHeight } from '@ulugbek-dev/windowsize';
 import AboutSvg from './../AboutSvg/AboutSvg';
 import { Wrapper } from './../../elements/Wrapper';
 import Typed from 'react-typed';
+import { useSelector } from 'react-redux';
 
 export default function About() {
+    const darkMode = useSelector(state => state.darkMode);
     const height = useHeight();
 
     return (
-        <AboutStyled height={height}>
+        <AboutStyled height={height} darkMode={darkMode}>
             <Wrapper className="wrapper">
                 <div className="animation">
                     <AboutSvg />

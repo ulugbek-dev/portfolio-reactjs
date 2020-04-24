@@ -12,7 +12,11 @@ export const NavbarStyled = styled.nav`
     align-items: center;
     z-index: 99;
     transition: 150ms;
-    ${props => props.scrollTop ? css`background: rgba(0, 0, 0, .9);` : css`background: transparent;`}
+    ${props => props.scrollTop 
+        ? css`height: 70px; box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.3); ${props.darkMode 
+            ? 'background: rgba(0, 0, 0, .9);' 
+            : 'background: rgba(255, 255, 255, .95);'}` 
+        : css`background: transparent;`}
 
     .wrapper {
         display: inherit;
@@ -35,7 +39,7 @@ export const NavbarStyled = styled.nav`
             opacity: .9;
             font-size: 16px;
             font-weight: 500;
-            transition: 250ms ease-out;
+            transition: 200ms ease-out;
             border-top: 1px solid transparent;
             border-bottom: 1px solid transparent;
             :hover {
@@ -43,7 +47,7 @@ export const NavbarStyled = styled.nav`
                 border-bottom: 1px solid ${props => props.darkMode ? textLight : textDark};
             }
         }
-        a.active li {
+        a.active {
             border-bottom: 1px solid ${props => props.darkMode ? textLight : textDark};
         }
     }

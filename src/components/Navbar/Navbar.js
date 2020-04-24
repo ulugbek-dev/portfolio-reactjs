@@ -38,18 +38,21 @@ export default function Navbar() {
         <NavbarStyled darkMode={darkMode} scrollTop={scrollTop > 30 ? true : false}>
             <Wrapper className="wrapper">
                 <ul>
-                    <NavLink exact to="/">
-                        <li>Home</li>
-                    </NavLink>
-                    <NavLink to="/about">
-                        <li>About</li>
-                    </NavLink>
-                    <NavLink to="/experience-and-education">
-                        <li>Experience & Eduction</li>
-                    </NavLink>
-                    <NavLink to="/portfolio">
-                        <li>Portfolio</li>
-                    </NavLink>
+                    <li>
+                        <NavLink exact to="/">Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/experience-and-education">Experience & Eduction</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/portfolio">Portfolio</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/skills">Skills</NavLink>
+                    </li>
                 </ul>
 
                 <div className="left">

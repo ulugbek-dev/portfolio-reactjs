@@ -5,8 +5,9 @@ import { AppStyled } from './styled';
 import Navbar from '../Navbar/Navbar';
 import About from '../About/About';
 import Experience from '../Experience/Experience';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Portfolio from '../Portfolio/Portfolio';
+import Skills from '../Skills/Skills';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useSelector } from 'react-redux';
 
 export default function App() {
@@ -22,9 +23,10 @@ export default function App() {
             <CSSTransition
               key={location.pathname}
               classNames="animate"
-              timeout={1200}
+              timeout={800}
             >
               <Switch location={location}>
+                <Route path="/skills" render={() => <Skills />} />
                 <Route path="/portfolio" render={() => <Portfolio />} />
                 <Route path="/experience-and-education" render={() => <Experience />} />
                 <Route path="/about" render={() => <About />} />

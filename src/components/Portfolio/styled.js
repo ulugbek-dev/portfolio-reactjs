@@ -85,4 +85,19 @@ export const PortfolioStyled = styled.section`
             transform: scale(1);
         }
     }
+
+    @media(max-width: 1024px) {
+        .wrapper {
+            padding-top: 120px;
+        }
+    }
+
+    @media(max-width: 600px) {
+        .wrapper {
+            padding-top: 100px;
+        }
+        .my-masonry-grid_column > div {
+            margin-bottom: 10px;
+        }
+    }
 `

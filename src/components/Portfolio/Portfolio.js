@@ -3,6 +3,7 @@ import { PortfolioStyled } from './styled';
 import Masonry from 'react-masonry-css';
 import { Wrapper } from '../../elements/Wrapper';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // Project images
 import AgentPortal from './../../img/portfolio/agent-portal.jpg';
@@ -22,12 +23,13 @@ import { useHeight } from '@ulugbek-dev/windowsize';
 export default function Portfolio() {
     const darkMode = useSelector(state => state.darkMode);
     const height = useHeight();
+    const dispatch = useDispatch();
     
     const breakpoints = {
         default: 4,
-        1100: 4,
-        700: 3,
-        500: 2
+        1200: 3,
+        768: 2,
+        600: 1
     };
 
     const projects = [
@@ -45,8 +47,13 @@ export default function Portfolio() {
         { name: "Limkokwing 'Best reason to study in asia'", img: BestReasonToStudyInAsia, url: "https://www.limkokwing.net/best-reason-to-study-in-asia" },
     ];
 
+    // Scroll top Navbar size
+    const handleScroll = e => {
+        dispatch({ type: 'NAV_SCROLL', payload: e.target.scrollTop });
+    }
+
     return (
-        <PortfolioStyled length={projects} height={height} darkMode={darkMode}>
+        <PortfolioStyled length={projects} height={height} darkMode={darkMode} onScroll={e => handleScroll(e)}>
             <Wrapper className="wrapper">
                 <Masonry
                     breakpointCols={breakpoints}

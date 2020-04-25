@@ -66,7 +66,7 @@ export const AboutStyled = styled.section`
         }
     }
 
-    @media(max-width: 991px) {
+    @media(max-width: 991px), (max-height: 540px) {
         .wrapper {
             flex-direction: column;
             padding-top: 140px;

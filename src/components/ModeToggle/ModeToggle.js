@@ -11,11 +11,12 @@ export default function ModeToggle() {
     }
     useEffect(() => {
         localStorage.setItem('UA-portfolio', JSON.stringify(state.darkMode));
-    }, [state]);    
+    }, [state]);
+    
     return (
         <ModeToggleStyled>
-            <input type="checkbox" id="day_night" onClick={handleDarkMode} checked={state.darkMode} />
-            <label for="day_night" className="toggle">
+            <input type="checkbox" id="day_night" onChange={handleDarkMode} checked={state.darkMode} />
+            <label htmlFor="day_night" className="toggle">
                 <span className="toggle_handler">
                     <span className="crater crater_1"></span>
                     <span className="crater crater_2"></span>

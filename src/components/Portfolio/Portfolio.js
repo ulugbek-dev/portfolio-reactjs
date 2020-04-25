@@ -62,7 +62,7 @@ export default function Portfolio() {
                 >
                     {projects.map((p, i) => (
                         <div className="item" key={i}>
-                            <a href={p.url} target="_blank">
+                            <a href={p.url} target="_blank" rel="noopener noreferrer">
                                 <img src={p.img} alt={p.name} />
                                 <p>{p.name}</p>
                             </a>

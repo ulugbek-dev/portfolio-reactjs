@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { darkBg, lightBg, textLight, textDark, primaryColor } from './../../elements/variables';
+import { darkBg, lightBg, primaryColor } from './../../elements/variables';
 
 export const PortfolioStyled = styled.section`
     ${props => css`min-height: ${props.height}px;`}

@@ -58,7 +58,7 @@ export default function Experience() {
             <Wrapper className="wrapper">
                 <div className="milestone">
                     {experienceAndEduction.map((e, i) => (
-                        <div className={`item ${i % 2 && width > 512 ? '' : 'reverse'}`}>
+                        <div key={i} className={`item ${i % 2 && width > 512 ? '' : 'reverse'}`}>
                             <div className="left">
                                 <h3>{e.position}</h3>
                             </div>

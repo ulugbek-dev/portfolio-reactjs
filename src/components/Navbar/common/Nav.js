@@ -26,19 +26,19 @@ export default function Nav() {
     useEffect(() => {
         if(mobileNav && width > 991)
             dispatch({ type: 'MOBILE_NAV' })
-    }, [width]);
+    }, [width, mobileNav]);
 
     return (
         <NavStyled onClick={e => e.stopPropagation()} mobileNav={mobileNav} length={navItems}>
             <ul>
-                {mobileNav && navItems.map(n => (
-                    <li>
+                {mobileNav && navItems.map((n, i) => (
+                    <li key={i}>
                         <NavLink onClick={handleClose} exact to={n.url}>{n.title}</NavLink>
                     </li>
                 ))}
 
-                {width > 991 && navItems.map(n => (
-                    <li>
+                {width > 991 && navItems.map((n, i) => (
+                    <li key={i}>
                         <NavLink onClick={handleClose} exact to={n.url}>{n.title}</NavLink>
                     </li>
                 ))}

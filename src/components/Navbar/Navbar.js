@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { NavbarStyled } from './styled';
 import { Wrapper } from './../../elements/Wrapper';
 import ModeToggle from './../ModeToggle/ModeToggle';

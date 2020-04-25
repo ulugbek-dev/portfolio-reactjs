@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SkillsSvgStyled = styled.div`
     width: 100%;
     max-width: 380px;
+    margin: auto;
 
     svg {
         width: 100%;

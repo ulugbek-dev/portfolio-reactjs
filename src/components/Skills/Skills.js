@@ -21,10 +21,12 @@ import photoshop from './../../img/skills/photoshop.png';
 import reactjs from './../../img/skills/reactjs.png';
 import sass from './../../img/skills/sass.png';
 import styledcomponents from './../../img/skills/styledcomponents.png';
+import { useDispatch } from 'react-redux';
 
 export default function Skills() {
     const darkMode = useSelector(state => state.darkMode);
     const height = useHeight();
+    const dispatch = useDispatch();
 
     const settings = {
         dots: false,
@@ -85,9 +87,14 @@ export default function Skills() {
         {name: "Expression Engine", img: ee},
     ]
 
+    // Scroll top Navbar size
+    const handleScroll = e => {
+        dispatch({ type: 'NAV_SCROLL', payload: e.target.scrollTop });
+    }
+
     return (
         <SkillsStyled height={height} darkMode={darkMode}>
-            <Wrapper className="wrapper">
+            <Wrapper className="wrapper" onScroll={handleScroll}>
                 <SkillsSvg />
                 
                 <Slider {...settings}>

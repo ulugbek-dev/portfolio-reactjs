@@ -6,7 +6,7 @@ export const AboutSvgStyled = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media(max-width: 991px) {
+    @media(max-width: 991px), (max-height: 540px) {
         height: 100%;
     }
 

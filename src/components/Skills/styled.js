@@ -21,7 +21,7 @@ export const SkillsStyled = styled.section`
 
     .slick-slider {
         width: 90%;
-        margin-top: 120px;
+        margin-top: 100px;
     }
 
     .slick-prev::before {
@@ -83,6 +83,21 @@ export const SkillsStyled = styled.section`
         }
         .slick-next::before {
             top: -30px;
+        }
+    }
+
+    @media(max-height: 650px) {
+        height: 100%;
+
+        .wrapper {
+            height: 100%;
+            overflow-y: auto;
+            display: block;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slick-slider {
+            margin: 60px auto 50px auto;
         }
     }
 `

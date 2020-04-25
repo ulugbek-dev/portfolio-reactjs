@@ -16,7 +16,7 @@ export const SkillsStyled = styled.section`
         justify-content: center;
         flex-direction: column;
         position: relative;
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     .slick-slider {
@@ -27,12 +27,16 @@ export const SkillsStyled = styled.section`
     .slick-prev::before {
         content: '\\2039';
         font-size: 24px;
-        color: ${props => props.darkMode ? textLight : textDark}
+        color: ${props => props.darkMode ? textLight : textDark};
+        position: relative;
+        top: -20px;
     }
     .slick-next::before {
         content: '\\203A';
         font-size: 24px;
-        color: ${props => props.darkMode ? textLight : textDark}
+        color: ${props => props.darkMode ? textLight : textDark};
+        position: relative;
+        top: -20px;
     }
 
     .item {
@@ -61,6 +65,24 @@ export const SkillsStyled = styled.section`
         to {
             opacity: 1;
             transform: scale(1);
+        }
+    }
+
+    @media(max-width: 600px) {
+        .wrapper {
+            padding-top: 40px;
+        }
+        img {
+            width: 70px;
+        }
+        .slick-slider {
+            margin-top: 60px;
+        }
+        .slick-prev::before {
+            top: -30px;
+        }
+        .slick-next::before {
+            top: -30px;
         }
     }
 `

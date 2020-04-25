@@ -33,7 +33,39 @@ export default function Skills() {
         slidesToShow: 8,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1290,
+                settings: {
+                slidesToShow: 7
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 950,
+                settings: {
+                slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 3
+                }
+            }
+        ]
     };
 
     const skills = [

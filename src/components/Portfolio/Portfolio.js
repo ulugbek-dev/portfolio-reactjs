@@ -39,7 +39,7 @@ export default function Portfolio() {
         { name: "Limkokwing Join Uganda", img: JoinUganda, url: "https://www.limkokwing.net/uganda-join" },
         { name: "Tvet", img: Tvet, url: "http://www.tvet.co/" },
         { name: "Edustart", img: AgentPortal, url: "https://limkokwing.edustart.co/login" },
-        { name: "My old Portfolio", img: OldPortfolio, url: "https://ulugbek-dev.github.io/portfolio" },
+        { name: "My old Portfolio", img: OldPortfolio, url: "https://ulugbek-dev.github.io/portfolio/" },
         { name: "LEI", img: LEI, url: "https://www.limkokwing.net/english" },
         { name: "Todo App", img: Todo, url: "https://todo-react-nu.now.sh/" },
         { name: "Starcademy", img: Starcademy, url: "https://www.starcademy.co/" },

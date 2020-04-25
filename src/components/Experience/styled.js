@@ -8,6 +8,7 @@ export const ExperienceStyled = styled.section`
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     .wrapper {
         display: flex;

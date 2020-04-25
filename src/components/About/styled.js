@@ -73,6 +73,7 @@ export const AboutStyled = styled.section`
             justify-content: flex-start;
             height: 100%;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
     
             .animation {
                 height: 30%;

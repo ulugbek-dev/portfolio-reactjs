@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const ModeToggleStyled = styled.div`
     position: relative;
     transform: scale(.65);
+    margin-right: -15px;
+
+    @media(max-width: 512px) {
+        transform: scale(.6);
+        margin-right: -20px;
+    }
             
     input {
         opacity: 0;

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { primaryColor, darkBg, lightBg } from '../../elements/variables';
 
-export const AboutStyled = styled.div`
+export const AboutStyled = styled.section`
     position: absolute;
+    min-height: ${props => props.height}px;
     background: ${props => props.darkMode ? darkBg : lightBg};
     height: ${props => props.height}px;
     width: 100%;
@@ -62,6 +63,43 @@ export const AboutStyled = styled.div`
         }
         to {
             opacity: 0;
+        }
+    }
+
+    @media(max-width: 991px) {
+        .wrapper {
+            flex-direction: column;
+            padding-top: 140px;
+            justify-content: flex-start;
+            height: 100%;
+            overflow-y: auto;
+    
+            .animation {
+                height: 30%;
+                display: block;
+                min-height: 300px;
+
+                svg {
+                    padding-left: 0;
+                    height: 100%;
+                }
+            }
+
+            .content {
+                padding: 30px 0 60px 0;
+            }
+        }
+    }
+
+    @media(max-width: 512px) {
+        .wrapper {
+            padding-top: 94px;
+        }
+        .hello {
+            margin-top: 10px;
+        }
+        .wrapper .content span {
+            font-size: 18px;
         }
     }
 `

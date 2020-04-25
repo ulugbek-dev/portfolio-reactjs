@@ -8,6 +8,9 @@ export const SocialsStyled = styled.div`
     a {
         margin: 0 10px;
         transition: 250ms ease-out;
+        :first-child {
+            margin-left: 0;
+        }
     }
 
     a.facebook: hover {
@@ -21,5 +24,18 @@ export const SocialsStyled = styled.div`
     }
     a.linkedin: hover {
         color: #0077B5;
+    }
+
+    @media(max-width: 512px) {
+        justify-content: space-between;
+        margin: 0;
+        opacity: 0;
+        animation: fadeIn 200ms forwards 1000ms;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
 `

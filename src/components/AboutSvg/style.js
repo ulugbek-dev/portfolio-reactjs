@@ -6,6 +6,10 @@ export const AboutSvgStyled = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media(max-width: 991px) {
+        height: 100%;
+    }
+
     #e9okq2uzh7l62_to {
         animation: e9okq2uzh7l62_to__to 3000ms linear infinite normal forwards
     }

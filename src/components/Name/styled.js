@@ -43,4 +43,8 @@ export const NameStyled = styled.h1`
             transform: scale(1);
         }
     }
+
+    @media(max-width: 512px) {
+        font-size: 30px;
+    }
 `

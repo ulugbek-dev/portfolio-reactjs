@@ -72,4 +72,10 @@ export const HomeStyled = styled.header`
             }
         }
     }
+
+    @media(max-width: 512px) {
+        a {
+            padding: 8px 23px;
+        }
+    }
 `

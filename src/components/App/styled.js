@@ -4,7 +4,10 @@ import { textLight, textDark } from './../../elements/variables';
 export const AppStyled = styled.div`
     color: ${props => props.darkMode ? textLight : textDark};
     height: 100%;
-
+    transition: 200ms;
+    transform: ${props => props.mobileNav 
+        ? 'translateX(250px); box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.24);' 
+        : 'translateX(0)'};
 
     .animate-enter,
     .animate-enter-active {

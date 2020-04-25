@@ -10,7 +10,7 @@ export default function ModeToggle() {
         dispatch({ type: 'DARK_MODE' });
     }
     useEffect(() => {
-        localStorage.setItem('UA-portfolio', JSON.stringify(state));
+        localStorage.setItem('UA-portfolio', JSON.stringify(state.darkMode));
     }, [state]);    
     return (
         <ModeToggleStyled>

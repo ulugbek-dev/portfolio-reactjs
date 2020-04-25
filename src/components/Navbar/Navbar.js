@@ -2,64 +2,45 @@ import React, { useState, useEffect } from 'react';
 import { NavbarStyled } from './styled';
 import { Wrapper } from './../../elements/Wrapper';
 import ModeToggle from './../ModeToggle/ModeToggle';
-import { NavLink } from 'react-router-dom';
 import Socials from './../Socials/Socials';
 import { useLocation } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import Nav from './common/Nav';
+import Hamburger from './common/Hamburger';
+import { useWidth } from '@ulugbek-dev/windowsize';
 
 export default function Navbar() {
     const darkMode = useSelector(state => state.darkMode);
-
-    // Scroll top offset
-    const [scrollTop, setScrollTop] = useState(0);
-
-    // Scroll top Navbar size
-    useEffect(() => {
-        document.addEventListener('scroll', () => {
-            setScrollTop(window.scrollY);
-        });
-
-        return () => {
-            document.removeEventListener('scroll', () => {
-                setScrollTop(window.scrollY);
-            });
-        }
-    });
+    const navScroll = useSelector(state => state.navScroll);
+    const width = useWidth();
+    const dispatch = useDispatch();
 
     // Scroll to top
     const { pathname } = useLocation();
       
     useEffect(() => {
         window.scrollTo(0, 0);
+        dispatch({ type: 'NAV_RESET' });
     }, [pathname]);
 
 
     return (
-        <NavbarStyled darkMode={darkMode} scrollTop={scrollTop > 30 ? true : false}>
-            <Wrapper className="wrapper">
-                <ul>
-                    <li>
-                        <NavLink exact to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about">About</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/experience-and-education">Experience & Eduction</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/portfolio">Portfolio</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/skills">Skills</NavLink>
-                    </li>
-                </ul>
+        <>
+            <NavbarStyled darkMode={darkMode} scrollTop={navScroll > 30 ? true : false}>
+                <Wrapper className="wrapper">
+                    {width > 991 && <Nav />}
+                    {width <= 991 && (
+                        <Hamburger />
+                    )}
 
-                <div className="left">
-                    <Socials />
-                    <ModeToggle />
-                </div>
-            </Wrapper>
-        </NavbarStyled>
+                    <div className="left">
+                        {width > 512 && <Socials />}
+                        <ModeToggle />
+                    </div>
+                </Wrapper>
+            </NavbarStyled>
+
+            {width <= 991 && <Nav />}
+        </>
     );
 }

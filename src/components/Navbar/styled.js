@@ -7,7 +7,6 @@ export const NavbarStyled = styled.nav`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
@@ -16,7 +15,7 @@ export const NavbarStyled = styled.nav`
         ? css`height: 70px; box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.3); ${props.darkMode 
             ? 'background: rgba(0, 0, 0, .9);' 
             : 'background: rgba(255, 255, 255, .95);'}` 
-        : css`background: transparent;`}
+        : css`height: 100px; background: transparent;`}
 
     .wrapper {
         display: inherit;
@@ -50,5 +49,9 @@ export const NavbarStyled = styled.nav`
         a.active {
             border-bottom: 1px solid ${props => props.darkMode ? textLight : textDark};
         }
+    }
+
+    @media(max-width: 512px) {
+        height: 70px;
     }
 `

@@ -8,13 +8,20 @@ import Experience from '../Experience/Experience';
 import Portfolio from '../Portfolio/Portfolio';
 import Skills from '../Skills/Skills';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function App() {
   const darkMode = useSelector(state => state.darkMode) 
+  const mobileNav = useSelector(state => state.mobileNav);
+  const dispatch = useDispatch();
+
+  const handleMobileNavClose = () => {
+    if(mobileNav)
+      dispatch({ type: 'MOBILE_NAV' })
+  }
 
   return (
-    <AppStyled darkMode={darkMode}>
+    <AppStyled darkMode={darkMode} mobileNav={mobileNav} onClick={handleMobileNavClose}>
       <Navbar />
 
       <Route

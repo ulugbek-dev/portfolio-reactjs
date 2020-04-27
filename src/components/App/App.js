@@ -9,6 +9,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import Skills from '../Skills/Skills';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useSelector, useDispatch } from 'react-redux';
+import { YMInitializer } from 'react-yandex-metrika';
 
 export default function App() {
   const darkMode = useSelector(state => state.darkMode) 
@@ -23,6 +24,8 @@ export default function App() {
   return (
     <AppStyled darkMode={darkMode} mobileNav={mobileNav} onClick={handleMobileNavClose}>
       <Navbar />
+
+      <YMInitializer accounts={[62372413]} options={{webvisor: true}} />
 
       <Route
         render={({ location }) => (

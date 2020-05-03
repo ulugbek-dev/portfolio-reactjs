@@ -5,6 +5,7 @@ import { Wrapper } from './../../elements/Wrapper';
 import { useSelector } from 'react-redux';
 import { useHeight } from '@ulugbek-dev/windowsize';
 import Slider from 'react-slick';
+import { useDispatch } from 'react-redux';
 
 // Skills images
 import adobexd from './../../img/skills/adobexd.png';
@@ -19,9 +20,9 @@ import mongodb from './../../img/skills/mongodb.png';
 import nextjs from './../../img/skills/nextjs.png';
 import photoshop from './../../img/skills/photoshop.png';
 import reactjs from './../../img/skills/reactjs.png';
+import redux from './../../img/skills/redux.png';
 import sass from './../../img/skills/sass.png';
 import styledcomponents from './../../img/skills/styledcomponents.png';
-import { useDispatch } from 'react-redux';
 
 export default function Skills() {
     const darkMode = useSelector(state => state.darkMode);
@@ -76,6 +77,7 @@ export default function Skills() {
         {name: "JavaScript", img: javascript},
         {name: "Bootstrap", img: bootstrap},
         {name: "ReactJS", img: reactjs},
+        {name: "Redux", img: redux},
         {name: "NextJS", img: nextjs},
         {name: "Styled Components", img: styledcomponents},
         {name: "Git", img: git},

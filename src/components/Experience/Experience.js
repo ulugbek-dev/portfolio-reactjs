@@ -12,8 +12,26 @@ export default function Experience() {
 
     const experienceAndEduction = [
         {
+            position: "Senior Frontend Engineer",
+            duration: "Aug 2023 - Present",
+            location: "Cologne, Germany",
+            company: "Packiro"
+        },
+        {
+            position: "Frontend Developer",
+            duration: "Dec 2021 - Jul 2023",
+            location: "Hamburg, Germany",
+            company: "Sport Alliance"
+        },
+        {
+            position: "Software Engineer",
+            duration: "Apr 2021 - Dec 2021",
+            location: "Kuala-Lumpur, Malaysia",
+            company: "REA Group"
+        },
+        {
             position: "Front-End Developer",
-            duration: "Oct 2017 - Present",
+            duration: "Oct 2017 - Feb 2021",
             location: "Cyberjaya, Malaysia",
             company: "Centre for Content Creation"
         },

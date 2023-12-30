@@ -14,7 +14,7 @@ export default function Nav() {
         {title: 'Home', url: '/'},
         {title: 'About', url: '/about'},
         {title: 'Experience & Eduction', url: '/experience-and-education'},
-        {title: 'Portfolio', url: '/portfolio'},
+        // {title: 'Portfolio', url: '/portfolio'},
         {title: 'Skills', url: '/skills'},
     ]
 

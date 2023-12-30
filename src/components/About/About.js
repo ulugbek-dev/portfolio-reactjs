@@ -13,12 +13,13 @@ export default function About() {
     const dispatch = useDispatch();
 
     const [text, setText] = useState([]);
+    const aboutMe = 'I am a Front-End Software Engineer with over six years of experience, I specialize in creating engaging, user-centric web interfaces. My expertise encompasses a broad range of technologies, including HTML, CSS, JavaScript, TypeScript, and advanced frameworks like ReactJS, NextJS, Redux, MobX and etc. My commitment to excellence is reflected in my ability to develop solutions that are both technically sound and aesthetically pleasing, always with an eye towards optimizing user experience and website performance.';
 
     useEffect(() => {
         if(width <= 512) 
-            setText([`I am a Web Developer specializing in Front-end Development and UI/UX Design. I have been working professionally in these fields for almost 3 years. I'm always curious to create, to improvise and to deliver the best design that fits with what user wants and needs.<br /> Very well experienced with HTML, CSS, JavaScript (ES6, jQuery), Bootstrap and etc, as I have done a decent number of front-end projects using these languages and frameworks. My goal is to produce high quality, good organized and SEO-friendly code.`])
+            setText([aboutMe])
         else
-            setText([`I am a Web Developer specializing in Back-end Developer`, `I am a Web Developer specializing in Front-end Development and UI/UX Design. I have been working professionally in these fields for almost 3 years. I'm always curious to create, to improvise and to deliver the best design that fits with what user wants and needs.<br /> Very well experienced with HTML, CSS, JavaScript (ES6, jQuery), Bootstrap and etc, as I have done a decent number of front-end projects using these languages and frameworks. My goal is to produce high quality, good organized and SEO-friendly code.`])
+            setText([`I am a Back-End `, aboutMe])
     }, [width]);
 
     
@@ -37,9 +38,10 @@ export default function About() {
                     <p className="hello">Hello <span>!</span></p>
                     <Typed
                         strings={text}
-                        typeSpeed={5}
-                        backSpeed={40}
-                        startDelay={600}
+                        typeSpeed={2}
+                        backSpeed={30}
+                        backDelay={500}
+                        startDelay={400}
                         smartBackspace={true}
                     />
                 </div>

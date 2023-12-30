@@ -15,14 +15,18 @@ import ee from './../../img/skills/ee.png';
 import git from './../../img/skills/git.png';
 import html from './../../img/skills/html.png';
 import javascript from './../../img/skills/javascript.png';
+import typescript from './../../img/skills/typescript.png';
 import jquery from './../../img/skills/jquery.png';
-import mongodb from './../../img/skills/mongodb.png';
+import mobX from './../../img/skills/mobx.png';
 import nextjs from './../../img/skills/nextjs.png';
 import photoshop from './../../img/skills/photoshop.png';
 import reactjs from './../../img/skills/reactjs.png';
 import redux from './../../img/skills/redux.png';
 import sass from './../../img/skills/sass.png';
 import styledcomponents from './../../img/skills/styledcomponents.png';
+import storybook from './../../img/skills/storybook.png';
+import graphQL from './../../img/skills/graphQL.png';
+import cypress from './../../img/skills/cypress.png';
 
 export default function Skills() {
     const darkMode = useSelector(state => state.darkMode);
@@ -75,15 +79,19 @@ export default function Skills() {
         {name: "HTML", img: html},
         {name: "CSS", img: css},
         {name: "JavaScript", img: javascript},
+        {name: "TypeScript", img: typescript},
         {name: "Bootstrap", img: bootstrap},
         {name: "ReactJS", img: reactjs},
-        {name: "Redux", img: redux},
         {name: "NextJS", img: nextjs},
+        {name: "Redux", img: redux},
+        {name: "MobX", img: mobX},
+        {name: "GraphQL", img: graphQL},
+        {name: "Cypress", img: cypress},
         {name: "Styled Components", img: styledcomponents},
+        {name: "Storybook", img: storybook},
         {name: "Git", img: git},
         {name: "jQuery", img: jquery},
         {name: "SaSS", img: sass},
-        {name: "MongoDB", img: mongodb},
         {name: "Adobe XD", img: adobexd},
         {name: "Photoshop", img: photoshop},
         {name: "Expression Engine", img: ee},

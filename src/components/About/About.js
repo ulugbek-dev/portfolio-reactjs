@@ -13,13 +13,13 @@ export default function About() {
     const dispatch = useDispatch();
 
     const [text, setText] = useState([]);
-    const aboutMe = 'I am a Front-End Software Engineer with over six years of experience, I specialize in creating engaging, user-centric web interfaces. My expertise encompasses a broad range of technologies, including HTML, CSS, JavaScript, TypeScript, and advanced frameworks like ReactJS, NextJS, Redux, MobX and etc. My commitment to excellence is reflected in my ability to develop solutions that are both technically sound and aesthetically pleasing, always with an eye towards optimizing user experience and website performance.';
+    const aboutMe = 'I am a Senior Front-End Software Engineer with over seven years of experience, I specialize in creating engaging, user-centric web interfaces. My expertise encompasses a broad range of technologies, including HTML, CSS, JavaScript, TypeScript, and advanced frameworks like ReactJS, NextJS, Redux, MobX and etc. My commitment to excellence is reflected in my ability to develop solutions that are both technically sound and aesthetically pleasing, always with an eye towards optimizing user experience and website performance.';
 
     useEffect(() => {
         if(width <= 512) 
             setText([aboutMe])
         else
-            setText([`I am a Back-End `, aboutMe])
+            setText([`I am a Senior Back-End `, aboutMe])
     }, [width]);
 
     

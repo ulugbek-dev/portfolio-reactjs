@@ -8,25 +8,25 @@ import Slider from 'react-slick';
 import { useDispatch } from 'react-redux';
 
 // Skills images
-import adobexd from './../../img/skills/adobexd.png';
-import bootstrap from './../../img/skills/bootstrap.png';
-import css from './../../img/skills/css.png';
-import ee from './../../img/skills/ee.png';
-import git from './../../img/skills/git.png';
-import html from './../../img/skills/html.png';
-import javascript from './../../img/skills/javascript.png';
-import typescript from './../../img/skills/typescript.png';
-import jquery from './../../img/skills/jquery.png';
-import mobX from './../../img/skills/mobx.png';
-import nextjs from './../../img/skills/nextjs.png';
-import photoshop from './../../img/skills/photoshop.png';
-import reactjs from './../../img/skills/reactjs.png';
-import redux from './../../img/skills/redux.png';
-import sass from './../../img/skills/sass.png';
-import styledcomponents from './../../img/skills/styledcomponents.png';
-import storybook from './../../img/skills/storybook.png';
-import graphQL from './../../img/skills/graphQL.png';
-import cypress from './../../img/skills/cypress.png';
+import adobexd from './../../assets/img/skills/adobexd.png';
+import bootstrap from './../../assets/img/skills/bootstrap.png';
+import css from './../../assets/img/skills/css.png';
+import ee from './../../assets/img/skills/ee.png';
+import git from './../../assets/img/skills/git.png';
+import html from './../../assets/img/skills/html.png';
+import javascript from './../../assets/img/skills/javascript.png';
+import typescript from './../../assets/img/skills/typescript.png';
+import jquery from './../../assets/img/skills/jquery.png';
+import mobX from './../../assets/img/skills/mobx.png';
+import nextjs from './../../assets/img/skills/nextjs.png';
+import photoshop from './../../assets/img/skills/photoshop.png';
+import reactjs from './../../assets/img/skills/reactjs.png';
+import redux from './../../assets/img/skills/redux.png';
+import sass from './../../assets/img/skills/sass.png';
+import styledcomponents from './../../assets/img/skills/styledcomponents.png';
+import storybook from './../../assets/img/skills/storybook.png';
+import graphQL from './../../assets/img/skills/graphQL.png';
+import cypress from './../../assets/img/skills/cypress.png';
 
 export default function Skills() {
     const darkMode = useSelector(state => state.darkMode);

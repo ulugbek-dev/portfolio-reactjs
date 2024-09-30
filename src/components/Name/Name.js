@@ -1,28 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NameStyled } from './styled';
 
 export default function Name({ name }) {
-    
-    const [anim, setAnim] = useState(true); 
-    const nameArr = name.split('').map((x, i) => x === ' ' 
-        ? <span className="space" key={i}>{x}</span> 
-        : <span key={i}>{x}</span>);
+  const audioRef = useRef(new Audio(require('../../assets/sounds/bubble_sound.wav')));
+  audioRef.current.volume = 0.2;
 
-    useEffect(() => {
-        const animation = setTimeout(() => { 
-            if(anim)
-                setAnim(!anim);
-            setAnim(true);
-        }, 5000);
+  const playSound = () => {
+    audioRef.current.currentTime = 0;
+    audioRef.current.play().catch((error) => {
+      console.error('Error playing sound: ', error);
+    });
+  };
 
-        return () => {
-            clearTimeout(animation)
-        }
-    })
+  const [anim, setAnim] = useState(true);
+  const nameArr = name.split('').map((x, i) => x === ' '
+    ? <span className="space" key={i}>{x}</span>
+    : <span key={i} onMouseEnter={playSound}>{x}</span>);
 
-    return (
-        <NameStyled>
-            {anim && nameArr}
-        </NameStyled>
-    );
+  useEffect(() => {
+    const animation = setTimeout(() => {
+      if (anim)
+        setAnim(!anim);
+      setAnim(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(animation)
+    }
+  })
+
+  return (
+    <NameStyled>
+      {anim && nameArr}
+    </NameStyled>
+  );
 }

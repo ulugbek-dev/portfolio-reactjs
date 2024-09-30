@@ -10,37 +10,37 @@ import Hamburger from './common/Hamburger';
 import { useWidth } from '@ulugbek-dev/windowsize';
 
 export default function Navbar() {
-    const darkMode = useSelector(state => state.darkMode);
-    const navScroll = useSelector(state => state.navScroll);
-    const width = useWidth();
-    const dispatch = useDispatch();
+  const darkMode = useSelector(state => state.darkMode);
+  const navScroll = useSelector(state => state.navScroll);
+  const width = useWidth();
+  const dispatch = useDispatch();
 
-    // Scroll to top
-    const { pathname } = useLocation();
-      
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        dispatch({ type: 'NAV_RESET' });
-    }, [pathname]);
+  // Scroll to top
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    dispatch({ type: 'NAV_RESET' });
+  }, [pathname]);
 
 
-    return (
-        <>
-            <NavbarStyled darkMode={darkMode} scrollTop={navScroll > 30 ? true : false}>
-                <Wrapper className="wrapper">
-                    {width > 991 && <Nav />}
-                    {width <= 991 && (
-                        <Hamburger />
-                    )}
+  return (
+    <>
+      <NavbarStyled darkMode={darkMode} scrollTop={navScroll > 30 ? true : false}>
+        <Wrapper className="wrapper">
+          {width > 991 && <Nav />}
+          {width <= 991 && (
+            <Hamburger />
+          )}
 
-                    <div className="left">
-                        {width > 512 && <Socials />}
-                        <ModeToggle />
-                    </div>
-                </Wrapper>
-            </NavbarStyled>
+          <div className="left">
+            {width > 512 && <Socials />}
+            <ModeToggle />
+          </div>
+        </Wrapper>
+      </NavbarStyled>
 
-            {width <= 991 && <Nav />}
-        </>
-    );
+      {width <= 991 && <Nav />}
+    </>
+  );
 }

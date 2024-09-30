@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import { NavStyled } from './NavStyled';
 import { useSelector, useDispatch } from 'react-redux';
 import { useWidth } from '@ulugbek-dev/windowsize';
 import Socials from '../../Socials/Socials';
+import NavLinkWithSound from '../../NavLinkWithSound/NavLinkWithSound';
 
 export default function Nav() {
     const mobileNav = useSelector(state => state.mobileNav);
@@ -14,7 +14,7 @@ export default function Nav() {
         {title: 'Home', url: '/'},
         {title: 'About', url: '/about'},
         {title: 'Experience & Eduction', url: '/experience-and-education'},
-        // {title: 'Portfolio', url: '/portfolio'},
+        {title: 'Portfolio', url: '/portfolio'},
         {title: 'Skills', url: '/skills'},
     ]
 
@@ -33,13 +33,13 @@ export default function Nav() {
             <ul>
                 {mobileNav && navItems.map((n, i) => (
                     <li key={i}>
-                        <NavLink onClick={handleClose} exact to={n.url}>{n.title}</NavLink>
+                        <NavLinkWithSound click={handleClose} exact to={n.url}>{n.title}</NavLinkWithSound>
                     </li>
                 ))}
 
                 {width > 991 && navItems.map((n, i) => (
                     <li key={i}>
-                        <NavLink onClick={handleClose} exact to={n.url}>{n.title}</NavLink>
+                        <NavLinkWithSound click={handleClose} exact to={n.url}>{n.title}</NavLinkWithSound>
                     </li>
                 ))}
             </ul>

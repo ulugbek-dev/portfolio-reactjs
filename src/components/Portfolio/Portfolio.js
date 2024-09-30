@@ -27,7 +27,7 @@ export default function Portfolio() {
 
   const projects = [
     { name: "Packiro", img: Packiro, url: "https://packiro.com/en" },
-    { name: "Limkokwing.net", img: Magicline, url: "https://www.magicline.com/" },
+    { name: "Magicline", img: Magicline, url: "https://www.magicline.com/" },
     { name: "Limkokwing.net", img: LimkokwingNet, url: "https://www.limkokwing.net/" },
     { name: "iProperty.com.my", img: iProperty, url: "https://www.iproperty.com.my/" },
     { name: "Limkokwing.com", img: LimkokwingCom, url: "https://www.limkokwing.com/" },
